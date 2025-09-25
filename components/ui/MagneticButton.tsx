@@ -7,7 +7,10 @@ type SizeType = "small" | "medium" | "large";
 
 interface MagneticButtonProps {
   size?: SizeType;
-  icon?: React.ComponentType<any>;
+  icon?: React.ComponentType<{
+    style?: React.CSSProperties;
+    className?: string;
+  }>;
   magneticStrength?: number;
   className?: string;
   iconProps?: React.ComponentProps<any>;
