@@ -66,21 +66,42 @@ const CircularText: React.FC<CircularTextProps> = ({
 }) => {
   const [scrollDirection, setScrollDirection] = useState(1);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isClient, setIsClient] = useState(false);
+  const [dimensions, setDimensions] = useState({ size: 192, radius: 70, iconSize: 30 });
 
   const rotation = useMotionValue(0);
 
-  // Calculate dimensions using vh units
+  // Calculate dimensions using vh units - only on client side
   const getVhInPixels = (vh: number) => {
+    if (typeof window === 'undefined') return vh * 8; // Fallback calculation for SSR
     return (vh * window.innerHeight) / 100;
   };
 
-  const size = getVhInPixels(sizeVh);
-  const radius = (size - getVhInPixels(6.5)) / 2; // 6.5vh instead of 52px for padding
+  // Update dimensions when component mounts or window resizes
+  useEffect(() => {
+    setIsClient(true);
+    
+    const updateDimensions = () => {
+      const size = getVhInPixels(sizeVh);
+      const radius = (size - getVhInPixels(6.5)) / 2; // 6.5vh instead of 52px for padding
+      const iconSize = getVhInPixels(iconSizeVh);
+      
+      setDimensions({ size, radius, iconSize });
+    };
+
+    updateDimensions();
+    window.addEventListener('resize', updateDimensions);
+    
+    return () => window.removeEventListener('resize', updateDimensions);
+  }, [sizeVh, iconSizeVh]);
+
+  const { size, radius, iconSize } = dimensions;
   const centerIconSize = size / 12; // Proportional center icon container
   const viewBoxSize = size;
-  const iconSize = getVhInPixels(iconSizeVh);
 
   useEffect(() => {
+    if (!isClient) return;
+    
     let animationId: number;
 
     const animate = () => {
@@ -105,10 +126,11 @@ const CircularText: React.FC<CircularTextProps> = ({
     animationSpeed,
     scrollBased,
     autoRotationSpeed,
+    isClient,
   ]);
 
   useEffect(() => {
-    if (!scrollBased) return;
+    if (!scrollBased || !isClient) return;
 
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -129,7 +151,7 @@ const CircularText: React.FC<CircularTextProps> = ({
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [lastScrollY, scrollBased]);
+  }, [lastScrollY, scrollBased, isClient]);
 
   const containerStyle = {
     width: `${sizeVh}vh`,
