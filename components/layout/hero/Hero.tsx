@@ -168,7 +168,7 @@ const Hero = () => {
                 iconPosition='right'
                 className='font-manrope'
               >
-                Let's Talk
+                Let&apos;s Talk
               </Button1>
             </motion.div>
           </div>

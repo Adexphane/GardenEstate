@@ -60,7 +60,7 @@ const Section5 = () => {
                 We specialize in connecting families with exceptional homes
                 featuring beautiful gardens, outdoor living spaces, and premium
                 landscaping. Our expert team understands the unique value of
-                properties with stunning outdoor environments. Let's find your
+                properties with stunning outdoor environments. Let&apos;s find your
                 perfect sanctuary!
               </p>
 

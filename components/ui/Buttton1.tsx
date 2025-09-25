@@ -26,7 +26,10 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode;
   variant?: ButtonVariant;
   size?: ButtonSize;
-  icon?: React.ComponentType<any>;
+  icon?: React.ComponentType<{
+    style?: React.CSSProperties;
+    className?: string;
+  }>;
   iconPosition?: IconPosition;
   loading?: boolean;
 }
