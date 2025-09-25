@@ -33,8 +33,8 @@ const Section5 = () => {
     lg:row-[1_/_2] lg:col-[1_/_3]
     '
           >
-            <div className='w-[80vh] '>
-              <p className=' text-[9vh] font-bold tracking-tight leading-[9vh]'>
+            <div className='w-fit md:w-[80vh] '>
+              <p className=' text-[7vh] sm:text-[9vh] font-bold tracking-tight leading-[8vh] sm:leading-[9vh]'>
                 Your Garden Home Specialists
               </p>
             </div>

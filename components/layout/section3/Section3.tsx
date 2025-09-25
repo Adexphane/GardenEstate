@@ -31,13 +31,13 @@ const Section3 = () => {
               transition={{
                 duration: 0.5,
                 ease: "easeInOut",
-                delay:0.1
+                delay: 0.1,
               }}
               viewport={{ once: true, margin: "-60px" }}
               className=' '
             >
-              <p className=' text-[9vh] font-bold tracking-tight leading-[9vh]'>
-                Our Operational Intelligence
+              <p className=' text-[7vh] sm:text-[9vh] font-bold tracking-tight leading-[8vh] sm:leading-[9vh]'>
+                Why Choose Us
               </p>
             </motion.div>
           </div>
@@ -55,27 +55,26 @@ const Section3 = () => {
               transition={{
                 duration: 0.5,
                 ease: "easeInOut",
-                delay:0.2
+                delay: 0.2,
               }}
               viewport={{ once: true, margin: "-60px" }}
               className=' '
             >
               <p className=' text-[2.2vh] font-bold tracking-tight mb-[2vh]'>
-                Get HTML color codes, Hex color codes, RGB, HSL and OKLCH values
-                with our color pickers, color wheel, color chart and HTML color
-                color chart and HTML color names. Let's go!color names. Let's
-                go!
+            We specialize in connecting families with exceptional garden homes 
+that perfectly blend indoor comfort with outdoor beauty. Our deep 
+understanding of landscaping and property features ensures you find 
+the perfect sanctuary.
               </p>
               <p className=' text-[2.2vh] font-bold tracking-tight'>
-                Get HTML color codes, Hex color codes, RGB, HSL and OKLCH values
-                with our color pickers, color wheel, color chart and HTML color
-                names.color wheel, color chart and HTML color names.color wheel,
-                color chart and HTML color names.color wheel, color chart and
-                HTML color names.
+           From cozy cottages with flower gardens to luxury estates with 
+expansive grounds, we have an extensive portfolio of properties 
+featuring mature landscaping, outdoor entertainment spaces, and 
+premium garden amenities that enhance your lifestyle.
               </p>
               <p className=' text-[2.2vh] font-bold tracking-tight'>
-                Get HTML color codes, Hex color codes, RGB, HSL and OKLCH values
-                with our color.
+          Our experienced agents provide personalized service and expert 
+guidance throughout your property journey.
               </p>
               <Button1
                 variant='secondary'

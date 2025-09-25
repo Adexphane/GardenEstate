@@ -187,7 +187,7 @@ const Hero = () => {
               <CircularText
                 text='GARDEN HOMES • LUXURY LIVING • OUTDOOR SPACES • GARDEN HOMES • LUXURY LIVING • OUTDOOR SPACES • GARDEN HOMES • LUXURY LIVING • OUTDOOR SPACES • GARDEN HOMES • LUXURY LIVING • OUTDOOR SPACES • '
                 bgColor='bg-none'
-                sizeVh={30}
+                sizeVh={26}
                 textColor='fill-white/90'
                 textSize='text-md'
                 shadowColor='shadow-none'
@@ -202,7 +202,7 @@ const Hero = () => {
               <CircularText
                 text='GARDEN HOMES • LUXURY LIVING • OUTDOOR SPACES • GARDEN HOMES • LUXURY LIVING • OUTDOOR SPACES • GARDEN HOMES • LUXURY LIVING • OUTDOOR SPACES • GARDEN HOMES • LUXURY LIVING • OUTDOOR SPACES • '
                 bgColor='bg-none'
-                sizeVh={25}
+                sizeVh={26}
                 textColor='fill-white/90'
                 textSize='text-md'
                 shadowColor='shadow-none'

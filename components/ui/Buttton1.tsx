@@ -49,7 +49,7 @@ const Button1: React.FC<ButtonProps> = ({
 
   const variants: Record<ButtonVariant, string> = {
     primary:
-      "bg-white text-Black hover:bg-white/90 focus:ring-white/20 shadow-sm rounded-lg",
+      "bg-[white] text-Black hover:bg-white/90 focus:ring-white/20 shadow-sm rounded-lg",
     secondary:
       "bg-neutral-900 text-white hover:bg-neutral-700 focus:ring-gray-500 border border-gray-300 rounded-lg",
     danger:

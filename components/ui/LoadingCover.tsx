@@ -42,7 +42,7 @@ const LoadingCover: React.FC<LoadingCoverProps> = ({ isEnabled = true }) => {
     <AnimatePresence>
       {showCover && (
         <motion.div
-          className='fixed inset-0 z-50 bg-neutral-900   flex items-center justify-center'
+          className='fixed inset-0 z-50 bg-emerald-900   flex items-center justify-center'
           initial={{ y: 0 }}
           animate={{
             y: isLoading ? 0 : "-100%",
@@ -55,24 +55,39 @@ const LoadingCover: React.FC<LoadingCoverProps> = ({ isEnabled = true }) => {
           }}
           onAnimationComplete={handleAnimationComplete}
         >
-          {/* Loading Animation */}
-          <div className='text-center'>
-            <div className='flex justify-center space-x-2 mt-4'>
-              <motion.div
-                className=''
-                animate={{
-                  scale: [1, 1.2, 1],
-                  opacity: [0.5, 1, 0.5],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                }}
-              >
-                <Trees size={40} className='text-white' />
-              </motion.div>
+          <motion.div
+            className='fixed inset-0 z-50 bg-neutral-900   flex items-center justify-center'
+            initial={{ y: 0 }}
+            animate={{
+              y: isLoading ? 0 : "-100%",
+            }}
+            exit={{ y: "-100%" }}
+            transition={{
+              duration: 0.8,
+              ease: [0.76, 0, 0.24, 1], // Custom easing for smooth slide
+              delay: isLoading ? 0 : 0.2, // Small delay before sliding up
+            }}
+            onAnimationComplete={handleAnimationComplete}
+          >
+            <div className='text-center'>
+              <div className='flex justify-center space-x-2 mt-4'>
+                <motion.div
+                  className=''
+                  animate={{
+                    scale: [1, 1.2, 1],
+                    opacity: [0.5, 1, 0.5],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                  }}
+                >
+                  <Trees size={40} className='text-white' />
+                </motion.div>
+              </div>
             </div>
-          </div>
+          </motion.div>
+          {/* Loading Animation */}
         </motion.div>
       )}
     </AnimatePresence>

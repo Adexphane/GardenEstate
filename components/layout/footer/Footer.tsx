@@ -19,7 +19,7 @@ const FooterLink = memo<FooterLinkProps>(
   ({ href, children, external = false }) => (
     <a
       href={href}
-      className='hover:text-blue-400 cursor-pointer transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-800 rounded-sm'
+      className='hover:text-white/80 cursor-pointer transition-colors duration-300 focus:outline-none  rounded-sm'
       {...(external && { target: "_blank", rel: "noopener noreferrer" })}
     >
       {children}
@@ -33,7 +33,7 @@ FooterLink.displayName = "FooterLink";
 const FooterSection = memo<{ title: string; children: React.ReactNode }>(
   ({ title, children }) => (
     <div className='flex flex-col gap-2'>
-      <h3 className='mb-2 uppercase text-gray-400 font-semibold text-sm tracking-wider'>
+      <h3 className='mb-2 uppercase text-white font-semibold text-sm tracking-wider'>
         {title}
       </h3>
       {children}
@@ -83,27 +83,27 @@ const DefaultFooterContent = memo(() => {
         title: "Properties",
         links: [
           { href: "/", text: "Home" },
-          { href: "/properties", text: "All Properties" },
-          { href: "/garden-homes", text: "Garden Homes" },
-          { href: "/luxury-estates", text: "Luxury Estates" },
+          { href: "/", text: "All Properties" },
+          { href: "/", text: "Garden Homes" },
+          { href: "/", text: "Luxury Estates" },
         ],
       },
       {
         title: "Services",
         links: [
-          { href: "/buying", text: "Buying" },
-          { href: "/selling", text: "Selling" },
-          { href: "/consultation", text: "Consultation" },
-          { href: "/property-management", text: "Management" },
+          { href: "/", text: "Buying" },
+          { href: "/", text: "Selling" },
+          { href: "/", text: "Consultation" },
+          { href: "/", text: "Management" },
         ],
       },
       {
         title: "About",
         links: [
-          { href: "/about", text: "About Us" },
-          { href: "/agents", text: "Our Agents" },
-          { href: "/testimonials", text: "Testimonials" },
-          { href: "/contact", text: "Contact" },
+          { href: "/", text: "About Us" },
+          { href: "/", text: "Our Agents" },
+          { href: "/", text: "Testimonials" },
+          { href: "/", text: "Contact" },
         ],
       },
     ],
@@ -132,7 +132,12 @@ const DefaultFooterContent = memo(() => {
       {/* Brand Section */}
       <div className='mt-8'>
         <h1
-          className='text-[clamp(5vh,32vh,30vh)] overflow-hidden whitespace-nowrap tracking-tighter font-bold leading-none select-none'
+          style={{
+            fontSize: "clamp(9vh, 20vw, 32vh)",
+            lineHeight: "clamp(45px, 5.5vw, 120px)",
+            marginBottom:"clamp(50px, 10rem, 130px)",
+          }}
+          className=' tracking-tighter font-bold leading-none whitespace-nowrap select-none'
           aria-label='Green Space - Company Name'
         >
           Green Space

@@ -71,7 +71,9 @@ export default function Home() {
           <Section6 />
         </div>
 
-        <Footer height={600} />
+        <div className=" cursor-auto">
+          <Footer height={600} />
+        </div>
       </div>
     </>
   );

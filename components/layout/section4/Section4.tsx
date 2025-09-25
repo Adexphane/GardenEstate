@@ -33,14 +33,12 @@ const Section4 = () => {
     lg:row-[1_/_3] lg:col-[1_/_3]
     rounded-3xl relative group'
           >
-            <div
-              className='absolute inset-0 w-full -z-10 ' // Made container larger for parallax movement
-            >
+            <div className='absolute inset-0 w-full rounded-3xl -z-10 group overflow-hidden'>
               <Image
                 src='/images/section4/v1.jpg'
                 alt='Hero background'
                 fill
-                className='object-cover rounded-3xl '
+                className='object-cover rounded-3xl transition-transform duration-800 group-hover:scale-105'
                 priority
                 sizes='100vw'
               />
@@ -64,7 +62,7 @@ const Section4 = () => {
                 delay: 0.2,
               }}
               viewport={{ once: true, margin: "-100px" }}
-              className='flex flex-col justify-between h-full p-[4vh]'
+              className='flex flex-col justify-between h-full  p-[4vh]'
             >
               <Button1
                 variant='outline2'
@@ -74,11 +72,11 @@ const Section4 = () => {
                 Premium Properties
               </Button1>
 
-              <div className=' w-[80vh] '>
-                <p className=' text-[10vh] text-white leading-[4.5vh] font-bold tracking-tight '>
+              <div className=' w-fit md:w-[80vh] '>
+                <p className=' text-[5vh] md:text-[10vh] text-white leading-[4.5vh] font-bold tracking-tight '>
                   Dream Gardens
                 </p>{" "}
-                <p className=' text-[2.2vh] text-white/90 font-bold tracking-tight mt-[4vh]'>
+                <p className=' text-[2.2vh] text-white/90 font-bold tracking-tight mt-[1vh] sm:mt-[4vh]'>
                   Discover luxury homes surrounded by meticulously designed
                   gardens and outdoor living spaces. Each property features
                   mature landscaping, private patios, and premium outdoor
@@ -104,13 +102,13 @@ const Section4 = () => {
      rounded-3xl relative group'
           >
             <div
-              className='absolute inset-0 w-full -z-10 h-[]' // Made container larger for parallax movement
+              className='absolute inset-0 w-full rounded-3xl -z-10 group overflow-hidden' // Made container larger for parallax movement
             >
               <Image
                 src='/images/section4/v2.jpg'
                 alt='Hero background'
                 fill
-                className='object-cover rounded-3xl '
+                className='object-cover rounded-3xl transition-transform duration-800 group-hover:scale-106'
                 priority
                 sizes='100vw'
               />
@@ -180,8 +178,8 @@ const Section4 = () => {
                   views, outdoor kitchens, and entertainment spaces.
                 </p>
               </div>
-              <p className=' text-[9vh] mb-[1vh] leading-[4.5vh] font-bold tracking-tight '>
-                Green space
+              <p className=' text-[6vh] sm:text-[7vh] md:text-[8vh] xl:text-[8.7vh] pt-[1vh] mb-[1vh] leading-[6.5vh] font-bold tracking-tight '>
+                Green Space
               </p>
             </div>
           </motion.div>

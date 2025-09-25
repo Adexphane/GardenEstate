@@ -123,7 +123,7 @@ const ArticleItem = memo(({ article, index }: ArticleItemProps) => {
             {article.title}
           </h3>
           <motion.p
-            className='flex-1 max-w-xl mx-[4vh] text-[2.16vh] leading-relaxed'
+            className='lg:flex hidden flex-1 max-w-xl mx-[4vh] text-[2.16vh] leading-relaxed'
             variants={{
               hidden: { color: "rgba(0, 0, 0, 0.7)" },
               visible: { color: "rgba(0, 0, 0, 0.7)" },
@@ -147,7 +147,7 @@ const ArticleItem = memo(({ article, index }: ArticleItemProps) => {
           </motion.time>
           <Magnetic strength={0.3}>
             <motion.button
-              className='ml-4 w-[6.5vh] h-[6.5vh] -rotate-45 rounded-full p-[1vh] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white/20'
+              className=' xl:flex lg:hidden md:flex ml-4 w-[6.5vh] h-[6.5vh] -rotate-45 rounded-full p-[1vh] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white/20'
               aria-label={`Read article: ${article.title}`}
               variants={{
                 hidden: {

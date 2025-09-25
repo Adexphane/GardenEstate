@@ -39,7 +39,7 @@ const DualScrollSections = () => {
       {/* First Scroll Section */}
       <div className='flex items-center rounded-4xl whitespace-nowrap overflow-hidden'>
         <motion.p
-          className='text-[10vh] tracking-tight font-semibold'
+          className='text-[6vh] sm:text-[10vh] tracking-tight font-semibold'
           style={{ x: xPosition1 }}
         >
           GARDEN HOMES • LUXURY LIVING • OUTDOOR SPACES • GARDEN HOMES • LUXURY
@@ -51,7 +51,7 @@ const DualScrollSections = () => {
       {/* Second Scroll Section - Opposite Direction */}
       <div className='flex items-center justify-center rounded-4xl whitespace-nowrap overflow-hidden'>
         <motion.p
-          className='text-[10vh] tracking-tight font-semibold'
+          className='text-[6vh] sm:text-[10vh] tracking-tight font-semibold'
           style={{ x: xPosition2 }}
         >
           GARDEN HOMES • LUXURY LIVING • OUTDOOR SPACES • GARDEN HOMES • LUXURY
