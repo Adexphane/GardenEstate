@@ -1,0 +1,30 @@
+<!-- Grid Container -->
+<div class="grid 
+  grid-cols-1 grid-rows-3 gap-[10px_0px]
+  md:grid-cols-2 md:grid-rows-2 md:gap-[10px_10px]
+  lg:grid-cols-3 lg:grid-rows-2 lg:gap-[10px_10px]">
+  <!-- Grid Item 1 -->
+  <div class="
+    row-[1_/_2] col-[1_/_2]
+    md:row-[1_/_2] md:col-[1_/_3]
+    lg:row-[1_/_3] lg:col-[1_/_3]
+    bg-[#c39a89]">
+    Item 1
+  </div>
+  <!-- Grid Item 2 -->
+  <div class="
+    row-[2_/_3] col-[1_/_2]
+    md:row-[2_/_3] md:col-[1_/_2]
+    lg:row-[1_/_2] lg:col-[3_/_4]
+    bg-[#5d7b1b]">
+    Item 2
+  </div>
+  <!-- Grid Item 3 -->
+  <div class="
+    row-[3_/_4] col-[1_/_2]
+    md:row-[2_/_3] md:col-[2_/_3]
+    lg:row-[2_/_3] lg:col-[3_/_4]
+    bg-[#0f80d7]">
+    Item 3
+  </div>
+</div>

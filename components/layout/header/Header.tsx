@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navlinks = ["Office-site", "Education", "Garden", "Promotional"];
+const navlinks = ["Featured Homes", "Garden Properties", "Services", "Contact"];
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -18,44 +18,67 @@ const Header = () => {
     >
       <div className='flex justify-between items-center'>
         {/* Logo */}
-        <p className='text-2xl md:text-3xl tracking-tighter font-manrope font-black'>
-          Coherence
-        </p>
+        <motion.p
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            duration: 0.3,
+            ease: "easeInOut",
+            delay: 1.9,
+          }}
+          className='text-2xl md:text-3xl tracking-tighter font-manrope font-black'
+        >
+          GreenSpace
+        </motion.p>
 
         {/* Desktop Navigation */}
         <div className='hidden md:flex items-center gap-7 tracking-tight font-semibold'>
           {navlinks.map((item) => (
-            <p
+            <motion.p
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{
+                duration: 0.3,
+                ease: "easeInOut",
+                delay: 2.0,
+              }}
               key={item}
               className='hover:text-gray-600 transition-colors cursor-pointer'
             >
               {item}
-            </p>
+            </motion.p>
           ))}
         </div>
 
         {/* Mobile Hamburger Menu Button */}
-        <button
+        <motion.button
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            duration: 0.3,
+            ease: "easeInOut",
+            delay: 2.0,
+          }}
           onClick={toggleMenu}
           className='md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5'
           aria-label='Toggle menu'
         >
           <span
-            className={`w-6 h-0.5 bg-black transition-all duration-300 ${
+            className={`w-7 h-1 bg-black transition-all duration-300 ${
               isMenuOpen ? "rotate-45 translate-y-2" : ""
             }`}
           ></span>
           <span
-            className={`w-6 h-0.5 bg-black transition-all duration-300 ${
+            className={`w-8 h-1 bg-black transition-all duration-300 ${
               isMenuOpen ? "opacity-0" : ""
             }`}
           ></span>
           <span
-            className={`w-6 h-0.5 bg-black transition-all duration-300 ${
+            className={`w-7 h-1 bg-black transition-all duration-300 ${
               isMenuOpen ? "-rotate-45 -translate-y-2" : ""
             }`}
           ></span>
-        </button>
+        </motion.button>
       </div>
 
       {/* Mobile Navigation Menu - Slide from Right */}
@@ -71,7 +94,7 @@ const Header = () => {
               stiffness: 200,
               duration: 0.3,
             }}
-            className='md:hidden fixed top-0 right-0 h-full w-80 max-w-[80vw] bg-white shadow-2xl z-50 flex flex-col'
+            className='md:hidden fixed top-0 right-0 h-full w-80 max-w-[80vw] bg-white/90 shadow-2xl z-50 flex flex-col'
           >
             {/* Close Button */}
             <div className='flex justify-end p-6'>
@@ -80,7 +103,7 @@ const Header = () => {
                 className='w-8 h-8 flex items-center justify-center'
                 aria-label='Close menu'
               >
-                <span className='text-2xl font-light'>&times;</span>
+                <span className='text-4xl font-light'>&times;</span>
               </button>
             </div>
 
@@ -93,7 +116,7 @@ const Header = () => {
                   animate={{ x: 0, opacity: 1 }}
                   transition={{
                     delay: index * 0.1 + 0.2,
-                    duration: 0.3,
+                    duration: 0.2,
                   }}
                   className='block py-4 text-lg tracking-tight font-semibold hover:text-gray-600 transition-colors cursor-pointer border-b border-gray-100 last:border-b-0'
                   onClick={() => setIsMenuOpen(false)}
@@ -114,7 +137,7 @@ const Header = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className='md:hidden fixed inset-0 bg-black bg-opacity-50 z-40'
+            className='md:hidden fixed inset-0 bg-black/50 backdrop-blur-lg bg-opacity-50 z-40'
             onClick={toggleMenu}
           />
         )}
